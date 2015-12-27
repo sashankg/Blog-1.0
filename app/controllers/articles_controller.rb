@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.sort_by { |article| article.created_at  }
 	end
 
 	private
