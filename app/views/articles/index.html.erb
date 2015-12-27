@@ -1,0 +1,15 @@
+<h1>Sashank Gogula's Blog</h1>
+<div>
+	<% @articles.each do |article| %>
+		<%= link_to(article) do %>
+			<div class= "article">
+				<h2>
+					<%= article.title %>
+				</h2>
+				<h3 style="display: inline-block;">
+					<%= article.created_at.strftime("%B %d, %Y") %>
+				</h3>
+			</div>
+		<% end %>
+	<% end %>
+</div>
